@@ -107,16 +107,16 @@ deer = Cult.new(deer_hash)
 lion = Cult.new(lion_hash)
 eagle = Cult.new(eagle_hash)
 
-alexi_hash = {
-  name: "Alexi",
+agent1_hash = {
+  name: "Agent 1",
   age: 55,
-  life_motto: "Be the octopus!"
+  life_motto: "Woomy!"
 }
 
-sasha_hash = {
-  name: "Sasha",
+agent8_hash = {
+  name: "Agent 8",
   age: 34,
-  life_motto: "Keep an open mind."
+  life_motto: "Veemo."
 }
 
 robin_hash = {
@@ -173,8 +173,8 @@ gaster_hash = {
   life_motto: ""
 }
 
-sasha = Follower.new(sasha_hash)
-alexi = Follower.new(alexi_hash)
+agent8 = Follower.new(agent8_hash)
+agent1 = Follower.new(agent1_hash)
 robin = Follower.new(robin_hash)
 morgan = Follower.new(morgan_hash)
 dimitri = Follower.new(dimitri_hash)
@@ -186,43 +186,43 @@ zelda = Follower.new(zelda_hash)
 gaster = Follower.new(gaster_hash)
 
 #Cult 1
-BloodOath.new(cult: cult, follower: alexi, initiation_date: random_date)
-BloodOath.new(cult: cult, follower: sasha, initiation_date: random_date)
+BloodOath.new(cult: cult, follower: agent1, initiation_date: random_date)
+BloodOath.new(cult: cult, follower: agent8, initiation_date: random_date)
 BloodOath.new(cult: cult, follower: robin, initiation_date: random_date)
 
 #Cult 2 Octopus
-BloodOath.new(cult: octopus, follower: alexi, initiation_date: random_date)
-BloodOath.new(cult: octopus, follower: sasha, initiation_date: random_date)
+BloodOath.new(cult: octopus, follower: agent1, initiation_date: random_date)
+BloodOath.new(cult: octopus, follower: agent8, initiation_date: random_date)
 BloodOath.new(cult: octopus, follower: morgan, initiation_date: random_date)
 
 #Cult 3
-BloodOath.new(cult: current, follower: alexi, initiation_date: random_date)
+BloodOath.new(cult: current, follower: agent1, initiation_date: random_date)
 
 #Cult 4 Squid
-BloodOath.new(cult: squid, follower: alexi, initiation_date: random_date)
+BloodOath.new(cult: squid, follower: agent1, initiation_date: random_date)
 
 #Cult 5 Coin
-BloodOath.new(cult: coin, follower: alexi, initiation_date: random_date)
+BloodOath.new(cult: coin, follower: agent1, initiation_date: random_date)
 BloodOath.new(cult: coin, follower: mario, initiation_date: random_date)
 
 #Cult 6 Triforce
-BloodOath.new(cult: triforce, follower: alexi, initiation_date: random_date)
+BloodOath.new(cult: triforce, follower: agent1, initiation_date: random_date)
 BloodOath.new(cult: triforce, follower: zelda, initiation_date: random_date)
 BloodOath.new(cult: triforce, follower: link, initiation_date: random_date)
 
 #Cult 7 Seiros
-BloodOath.new(cult: seiros, follower: alexi, initiation_date: random_date)
+BloodOath.new(cult: seiros, follower: agent1, initiation_date: random_date)
 
 #Cult 8 Deer
-BloodOath.new(cult: deer, follower: alexi, initiation_date: random_date)
+BloodOath.new(cult: deer, follower: agent1, initiation_date: random_date)
 BloodOath.new(cult: deer, follower: claude, initiation_date: random_date)
 
 #Cult 9 Lion
-BloodOath.new(cult: lion, follower: alexi, initiation_date: random_date)
+BloodOath.new(cult: lion, follower: agent1, initiation_date: random_date)
 BloodOath.new(cult: lion, follower: dimitri, initiation_date: random_date)
 
 #Cult 10 Eagle
-BloodOath.new(cult: eagle, follower: alexi, initiation_date: random_date)
+BloodOath.new(cult: eagle, follower: agent1, initiation_date: random_date)
 BloodOath.new(cult: eagle, follower: edelgard, initiation_date: random_date)
 
 binding.pry
