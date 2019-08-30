@@ -23,7 +23,6 @@ class BloodOath
         date = new_date
       end
     end
-    # puts earliest_oath.initiation_date
     earliest_oath.follower
   end
 

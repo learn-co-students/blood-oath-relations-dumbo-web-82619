@@ -137,22 +137,22 @@ Our platform is done! Let's commit our code!
 
 Now one highly requested feature from `Follower`s using your app that you plan to paywall ($$$) is to see your fellow cult members. See if you can implement this method.
 
-* `Follower#fellow_cult_members`
-  * returns a unique `Array` of followers who are in the same cults as you
+<!-- * `Follower#fellow_cult_members`
+  * returns a unique `Array` of followers who are in the same cults as you -->
 
 A highly requested feature from `Cult`s using your app that you plan to paywall ($$$) is to restrict ages for recruits. See if you can implement this functionality.
 
-* `Cult#minimum_age`
+<!-- * `Cult#minimum_age`
   * returns a `Fixnum` that is the minimum age required for followers joining this cult
 * `Cult#recruit_follower`
-  * takes in an argument of a `Follower` instance and adds them to this cult's list of followers
-  * NOW this is changed such that if the given `Follower` instance is not of age:
+  * takes in an argument of a `Follower` instance and adds them to this cult's list of followers -->
+  <!-- * NOW this is changed such that if the given `Follower` instance is not of age:
     * do not let them join the cult
-    * print out a friendly message informing them that they are too young
-* `Follower#join_cult`
+    * print out a friendly message informing them that they are too young -->
+<!-- * `Follower#join_cult`
   * takes in an argument of a `Cult` instance and adds this follower to the cult's list of followers
   * NOW this is changed such that if you don't meet the minimum age requirement of the given `Cult` instance:
     * do not let them join the cult
-    * print out a friendly message informing them that they are too young
+    * print out a friendly message informing them that they are too young -->
 
 Congrats on finishing your cult social network platform. Time to rake in the $$$!

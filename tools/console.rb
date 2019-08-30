@@ -20,70 +20,80 @@ cult_hash = {
   name: "The Cult of Cults",
   location: "Everywhere",
   founding_year: random_year,
-  slogan: "We are all."
+  slogan: "We are all.",
+  minimum_age: 18
 }
 
 octopus_hash = {
   name: "Cult of Octopus",
   location: "Under the Sea",
   founding_year: 2019,
-  slogan: "We love Octopus!"
+  slogan: "We love Octopus!",
+  minimum_age: 18
 }
 
 current_hash = {
   name: "Cult of 2019",
   location: "Elsewhere",
   founding_year: random_year,
-  slogan: "Stay current!"
+  slogan: "Stay current!",
+  minimum_age: 18
 }
 
 squid_hash = {
   name: "Cult of Squid",
   location: "Under the Sea",
   founding_year: random_year,
-  slogan: "We love Squid!"
+  slogan: "We love Squid!",
+  minimum_age: 18
 }
 
 coin_hash = {
   name: "Cult of Coins",
   location: "Mushroom Kingdom",
   founding_year: 1985,
-  slogan: "Let's-a-go!"
+  slogan: "Let's-a-go!",
+  minimum_age: 18
 }
 
 triforce_hash = {
   name: "Cult of the Triforce",
   location: "Hyrule",
   founding_year: 1986,
-  slogan: "It's dangerous to go alone! Take this."
+  slogan: "It's dangerous to go alone! Take this.",
+  minimum_age: 18
 }
 
 seiros_hash = {
   name: "Church of Seiros",
   location: "Fodlan",
   founding_year: random_year,
-  slogan: "All I ask is that you guide these open minds with virtue, care, and sincerity."
+  slogan: "All I ask is that you guide these open minds with virtue, care, and sincerity.",
+  minimum_age: 18
 }
 
 deer_hash = {
   name: "Golden Deer",
   location: "Fodlan",
   founding_year: random_year,
-  slogan: "Fear the Deer!"
+  slogan: "Fear the Deer!",
+  minimum_age: 18
 }
 
 lion_hash = {
   name: "Blue Lions",
   location: "Fodlan",
   founding_year: random_year,
-  slogan: "For Justice!"
+  slogan: "For Justice!",
+  minimum_age: 18
 }
 
 eagle_hash = {
   name: "Black Eagles",
   location: "Fodlan",
   founding_year: random_year,
-  slogan: "Hail Emperor Edelgard!"
+  slogan: "Hail Emperor Edelgard!",
+  minimum_age: 18
 }
 
 cult = Cult.new(cult_hash)
@@ -117,7 +127,7 @@ robin_hash = {
 
 morgan_hash = {
   name: "Morgan",
-  age: 48,
+  age: 15,
   life_motto: "Always stay mindful."
 }
 

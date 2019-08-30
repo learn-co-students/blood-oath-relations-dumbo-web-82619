@@ -1,12 +1,15 @@
+require 'time'
+
 class Cult
-    attr_reader :name, :location, :founding_year, :slogan
+    attr_reader :name, :location, :founding_year, :slogan, :minimum_age
     @@all = []
 
-    def initialize(name: name, location: location, founding_year: founding_year, slogan: slogan)
+    def initialize(name: name, location: location, founding_year: founding_year, slogan: slogan, minimum_age: minimum_age)
         @name = name
         @location = location
         @founding_year = founding_year
         @slogan = slogan
+        @minimum_age = minimum_age
         @@all << self
     end
 
@@ -31,7 +34,11 @@ class Cult
     end
 
     def recruit_follower(follower)
-        BloodOath.new({ cult: self, follower: follower })
+      if follower.age < self.minimum_age
+        puts "We're terribly sorry, but we at #{self.name} have a minimum age requirement of #{self.minimum_age}. Please consider joining us in #{self.minimum_age - follower.age} year(s). Thank you for understanding!"
+      else
+        BloodOath.new({ cult: self, follower: follower, initiation_date: Time.now.strftime("%Y-%m-%d") })
+      end
     end
 
     def self.find_by_name(name)

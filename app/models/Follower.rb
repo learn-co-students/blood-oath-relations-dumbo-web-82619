@@ -26,7 +26,11 @@ class Follower
   end
 
   def join_cult(cult)
-    BloodOath.new(cult: cult, follower: self, initiation_date: "2019-08-30")
+    if self.age < cult.minimum_age
+      puts "We're terribly sorry, but we at #{cult.name} have a minimum age requirement of #{cult.minimum_age}. Please consider joining us in #{cult.minimum_age - self.age} year(s). Thank you for understanding!"
+    else
+      BloodOath.new(cult: cult, follower: self, initiation_date: Time.now.strftime("%Y-%m-%d"))
+    end
   end
 
   def self.of_a_certain_age(age)
@@ -59,5 +63,16 @@ class Follower
       -follower.oaths.length
     end
     array[0..9]
+  end
+
+  def fellow_cult_members
+    array = self.cults.map do |cult|
+      cult.followers
+    end
+    array.flatten!.uniq!
+
+    array.filter do |follower|
+      follower != self
+    end
   end
 end
