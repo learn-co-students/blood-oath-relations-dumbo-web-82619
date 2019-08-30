@@ -53,11 +53,36 @@ class Cult
     end
 
     def average_age
-      # fix to float
       self.followers.map do |follower|
         follower.age
       end
-      .inject(0, :+) / self.cult_population
+      .inject(0, :+) / self.cult_population.to_f
     end
 
+    def my_followers_mottos
+      self.followers.each do |follower|
+        follower.life_motto
+        puts follower.life_motto
+      end
+    end
+
+    def self.least_popular
+      least_popular_cult = self.all.first
+      amount = least_popular_cult.cult_population
+      self.all.each do |cult|
+        new_amount = cult.cult_population
+        if new_amount < amount
+          least_popular_cult = cult
+          amount = new_amount
+        end
+      end
+      return least_popular_cult
+    end
+
+    def self.most_common_location
+      new_hash = self.all.each_with_object(Hash.new(0)) do |cult, hash|
+        hash[cult.location] += 1
+      end
+      new_hash.max_by(&:last).first
+    end
 end

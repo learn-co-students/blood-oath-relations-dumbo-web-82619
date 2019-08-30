@@ -51,7 +51,7 @@ Questions you should ask yourself:
 
 **`Cult`**
 
-* `Cult#name`
+<!-- * `Cult#name`
   * returns a `String` that is the cult's name
 * `Cult#location`
   * returns a `String` that is the city where the cult is located
@@ -70,11 +70,11 @@ Questions you should ask yourself:
 * `Cult.find_by_location`
   * takes a `String` argument that is a location and returns an `Array` of cults that are in that location
 * `Cult.find_by_founding_year`
-  * takes a `Fixnum` argument that is a year and returns all of the cults founded in that year
+  * takes a `Fixnum` argument that is a year and returns all of the cults founded in that year -->
 
 **`Follower`**
 
-* `Follower#name`
+<!-- * `Follower#name`
   * returns a `String` that is the follower's name
 * `Follower#age`
   * returns a `Fixnum` that is the age of the follower
@@ -87,14 +87,14 @@ Questions you should ask yourself:
 * `Follower.all`
   * returns an `Array` of all the followers
 * `Follower.of_a_certain_age`
-  * takes a `Fixnum` argument that is an age and returns an `Array` of followers who are the given age or older
+  * takes a `Fixnum` argument that is an age and returns an `Array` of followers who are the given age or older -->
 
 **`BloodOath`**
 
-* `BloodOath#initiation_date`
+<!-- * `BloodOath#initiation_date`
   * returns a `String` that is the initiation date of this blood oath in the format _YYYY-MM-DD_.
 * `BloodOath.all`
-  * returns an `Array` of all the blood oaths
+  * returns an `Array` of all the blood oaths -->
 
 ---
 
@@ -106,28 +106,28 @@ Now we want to build out some useful features so `Cult`s and `Follower`s and get
 
 **`Cult`**
 
-* `Cult#average_age`
-  * returns a `Float` that is the average age of this cult's followers
-* `Cult#my_followers_mottos`
-  * prints out all of the mottos for this cult's followers
-* `Cult.least_popular`
+<!-- * `Cult#average_age`
+  * returns a `Float` that is the average age of this cult's followers -->
+<!-- * `Cult#my_followers_mottos`
+  * prints out all of the mottos for this cult's followers -->
+<!-- * `Cult.least_popular`
   * returns the `Cult` instance who has the least number of followers :(
 * `Cult.most_common_location`
-  * returns a `String` that is the location with the most cults
+  * returns a `String` that is the location with the most cults -->
 
 **`Follower`**
 
-* `Follower#my_cults_slogans`
-  * prints out all of the slogans for this follower's cults
-* `Follower.most_active`
-  * returns the `Follower` instance who has joined the most cults
-* `Follower.top_ten`
-  * returns an `Array` of followers; they are the ten most active followers
+<!-- * `Follower#my_cults_slogans`
+  * prints out all of the slogans for this follower's cults -->
+<!-- * `Follower.most_active`
+  * returns the `Follower` instance who has joined the most cults -->
+<!-- * `Follower.top_ten`
+  * returns an `Array` of followers; they are the ten most active followers -->
 
 **`BloodOath`**
 
-* `BloodOath.first_oath`
-  * returns the `Follower` instance for the follower that made the very first blood oath
+<!-- * `BloodOath.first_oath`
+  * returns the `Follower` instance for the follower that made the very first blood oath -->
 
 ---
 
