@@ -14,10 +14,50 @@ class Cult
         BloodOath.new(Time.now.strftime("%F"), follower_instance, self) #not done
     end
 
-    def cult_population
+    def members #helper method
         BloodOath.all.select do |bo|
             bo.cult == self 
-        end.size
+        end
+    end
+
+    def cult_population
+        members.size
+    end
+
+    def average_age
+        total = members.sum do |member|
+            member.follower.age
+        end
+
+        (total / cult_population).to_f
+        # binding.pry
+    end
+
+    def my_followers_mottos
+        members.map do |member|
+            member.follower.life_motto
+        end
+    end
+
+    def self.least_popular
+        self.all.min_by do |cult|
+            cult.cult_population
+        end
+    end
+
+    def self.most_common_location
+        hash = {}
+        self.all.map do |cult|
+            #checks if hash has following cult location. If not, key to location and value to 1
+            if !hash.key?(cult.location)
+                hash[cult.location] = 1
+            else
+            #if exists, add value by 1
+                hash[cult.location] += 1
+            end
+        end
+        #returns key with highest value
+        hash.key(hash.values.max)
     end
     
     def self.find_by_name(string_name)
