@@ -24,15 +24,5 @@ class BloodOath
     def self.first_oath
         self.initiation_dates.min
     end
-
-
-
-
-
-
-
-
-
-
 end
 

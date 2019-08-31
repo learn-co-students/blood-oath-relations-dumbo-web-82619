@@ -25,7 +25,12 @@ class Cult
     end
 
     def recruit_follower(follower)
-        BloodOath.new(self, follower, Time.now.strftime("%Y-%m-%d"))
+        if follower.age < self.minimum_age
+            "Sorry, you are too young to join our esteemed cult"
+        else
+            BloodOath.new(self, follower, Time.now.strftime("%Y-%m-%d"))
+            "#{follower.name} has joined the #{self.name}"
+        end
     end
 
     def cult_population
@@ -37,14 +42,14 @@ class Cult
     end
 
     def self.find_by_name(name)
-        self.all.select do |cult|
-            cult.name == name
+        self.all.find do |cult|
+            cult.name.downcase == name.downcase
         end
     end
 
     def self.find_by_location(location)
         self.all.select do |cult|
-            cult.location == location
+            cult.location.downcase == location.downcase
         end
     end
 
@@ -67,7 +72,7 @@ class Cult
 
     def my_follower_mottos
         mottos = self.followers.map do |follower|
-            follower.life_motto
+            "#{follower.name}: #{follower.life_motto}"
         end
         print mottos
     end
@@ -96,5 +101,8 @@ class Cult
         end
     end
 
+    def minimum_age
+        min_age = 18
+    end
 
 end

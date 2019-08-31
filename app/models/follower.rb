@@ -26,7 +26,12 @@ class Follower
     end
 
     def join_cult(cult)
-        BloodOath.new(cult, self, Time.now.strftime("%Y-%m-%d"))
+        if self.age < cult.minimum_age
+            "Sorry, you are to young to join this cult"
+        else
+            BloodOath.new(cult, self, Time.now.strftime("%Y-%m-%d"))
+            "#{self.name} has joined the #{cult.name}"
+        end
     end
 
     def self.of_a_certain_age(age)
@@ -62,6 +67,23 @@ class Follower
         sorted = self.all.sort_by do |follower|
             follower.cults_joined
         end
-        sorted.last(10)
+        name_list = sorted.map do |follower|
+            follower.name
+        end
+        name_list.last(10)
     end
+
+    def fellow_cult_members
+        follower_list = []
+        followers = self.cults.map do |cult|
+            cult.followers.each do |follower|
+                follower_list << follower
+            end
+        end
+        uniq_list = follower_list.uniq
+        uniq_list.delete(self)
+        uniq_list.map do |follower|
+            follower.name
+        end
+    end 
 end
