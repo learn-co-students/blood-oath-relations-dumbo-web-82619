@@ -10,6 +10,10 @@ class Cult
         @@all << self
     end
 
+    def minimum_age
+        21
+    end
+
     def recruit_follower(follower_instance)
         BloodOath.new(Time.now.strftime("%F"), follower_instance, self) #not done
     end
@@ -17,6 +21,12 @@ class Cult
     def members #helper method
         BloodOath.all.select do |bo|
             bo.cult == self 
+        end
+    end
+
+    def members_name
+        members.map do |bo|
+            bo.follower.name
         end
     end
 

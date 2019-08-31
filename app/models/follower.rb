@@ -37,6 +37,17 @@ class Follower
         end
     end
 
+    def fellow_cult_members
+        #a lot to explain, just does the job
+        members = my_cults.map do |bo|
+            bo.cult.members_name
+        end.flatten.uniq
+        #makes sure not to return the person's name with the array
+        members.select do |member_name|
+            member_name != self.name
+        end        
+    end
+
     def self.helper_for_most_active
         hash = {}
         self.all.map do |follower|

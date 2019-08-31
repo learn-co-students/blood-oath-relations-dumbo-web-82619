@@ -6,7 +6,17 @@ class BloodOath
         @initiation_date = initiation_date
         @follower = follower
         @cult = cult
-        @@all << self
+        # @@all << self
+        check_age
+    end
+
+    def check_age
+        # binding.pry
+        if self.follower.age > self.cult.minimum_age
+            @@all << self
+        else
+            puts "#{self.follower.name} is too young to join. Denied."
+        end
     end
 
     def self.first_oath
