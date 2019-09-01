@@ -7,9 +7,9 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
-young_money = Cult.new("Young Money", "LA", 2006, "We The Best")
-free_masons = Cult.new("Free Masons", "NY", 1828, "Illuminati is watching")
-hipsters = Cult.new("Hipsters", "NY", 2009, "avocado toast is so good")
+young_money = Cult.new("Young Money", "LA", 2006, "We The Best", 18)
+free_masons = Cult.new("Free Masons", "NY", 1828, "Illuminati is watching", 21)
+hipsters = Cult.new("Hipsters", "NY", 2009, "avocado toast is so good", 11)
 
 wayne = Follower.new("Lil Wayne", 36, "Young Moolah baby")
 nicki = Follower.new("Nicki Minaj", 36, "My anaconda don't")

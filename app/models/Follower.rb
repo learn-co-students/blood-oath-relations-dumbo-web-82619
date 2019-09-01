@@ -24,7 +24,11 @@ class Follower
     end
 
     def join_cult(cult)
+        if self.age >= cult.minimum_age
         cult.followers << self
+        else
+        puts "Patience. You're not of age yet to join this organization."
+        end
     end
 
     def self.of_a_certain_age(num)
@@ -63,6 +67,8 @@ class Follower
         end
         my_homies.uniq
     end
+
+    
 
             
 
