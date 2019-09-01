@@ -4,7 +4,7 @@ class BloodOath
     @@all = []
     
     def initialize(follower, cult)
-        @initiation_date = "2019-08-26"
+        @initiation_date = Time.now.strftime("%Y/%m/%d")
         @follower = follower
         @cult = cult
         @@all << self
@@ -13,6 +13,10 @@ class BloodOath
     def self.all
         @@all 
     end
-end
 
+    def self.first_oath
+        oaths = self.all.sort_by {|blood_oath| blood_oath.initiation_date}
+        oaths[0].follower
+      end
+end
 
