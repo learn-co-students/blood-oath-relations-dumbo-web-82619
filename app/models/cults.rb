@@ -21,7 +21,7 @@ class Cult
     if follower.age >= min_age
       Bloodoath.new(self, follower)
     else
-      "Sorry, you are not old enough to join #{self.name}"
+      "Sorry, #{follower.name} is not old enough to join."
     end
   end
 
