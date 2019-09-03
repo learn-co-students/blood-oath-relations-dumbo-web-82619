@@ -14,6 +14,12 @@ class BloodOath
         @@all
     end
 
-    
+    # Returns the `Follower` instance for the follower that made the very first blood oath
+    def self.first_oath
+        sorted_all_blood_oaths = self.all.sort_by do |blood_oath|
+            blood_oath.initiation_date
+        end
+        sorted_all_blood_oaths[0].follower
+    end
 
 end
