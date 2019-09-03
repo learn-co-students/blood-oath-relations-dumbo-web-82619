@@ -1,14 +1,14 @@
 class Cult
 
-    attr_reader :name, :location, :founding_year, :slogan 
+    attr_reader :name, :location, :founding_year, :slogan, :minimum_age
     @@all = []
 
-    def initialize(name, location, founding_year, slogan)
+    def initialize(name, location, founding_year, slogan, minimum_age = 16)
         @name = name
         @location = location
         @founding_year = founding_year
         @slogan = slogan
-
+        @minimum_age = minimum_age
         @@all << self
     end 
 
@@ -79,12 +79,6 @@ class Cult
 
         cults_of_the_location[0].location
     end 
-
-    def minimum_age
-        return 16
-    end 
-
-
 
 
 end 

@@ -21,7 +21,7 @@ f11 = Follower.new("Kylies_clone", 2, "error: does not compute")
 
 c1 = Cult.new("Hutterites", "Montana", 1736, "Like the Amish but unfriendlier")
 c2 = Cult.new("RadFae", "Short Mountain", 1970, "Lesbian separatist but make it fashion")
-c3 = Cult.new("Naihsadark", "Montana", 1991, "free lip kits!!")
+c3 = Cult.new("Naihsadark", "Montana", 1991, "free lip kits!!", 18)
 
 # f1.join_cult(c1)
 # f1.join_cult(c2)
